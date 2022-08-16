@@ -30,8 +30,9 @@ phone.addEventListener('input', function () {
 const pass = document.querySelector('#password');
 const passError = document.querySelector('.pass-error');
 
+
 pass.addEventListener('input', function () {
-    let passRegex = RegExp('^[a-z0-9]{8,}$');
+    let passRegex = RegExp('^[A-Z]{1}[a-z0-9@_*#]{7,}$');
     if (passRegex.test(pass.value))
         passError.textContent = "";
     else passError.textContent = "Password is incorrect";
